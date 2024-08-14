@@ -1,23 +1,21 @@
 import React from 'react';
-import './App.css';
 import {useFetch} from "./useFetch";
 
-function App() {
-    const [data] = useFetch('https://jsonplaceholder.typicode.com/users');
+function Component1() {
+    const data = useFetch('https://jsonplaceholder.typicode.com/users');
 
     return (
         <div className="App">
-            <p>Реализуйте хук "useFetch" для возможности получения данных с разных URL</p>
-            <h1>Список пользователей</h1>
+            <div className="section-description">
+                <p>Реализуйте хук "useFetch" для возможности получения данных с разных URL</p>
+                <p>Получите список пользователей и выведите его на страницу</p>
+            </div>
+            <h3>Список пользователей</h3>
             <div>
-                {
-                    data.map((user: any) => {
-                        return <li>[{user.id}] {user.name}</li>
-                    })
-                }
+                список...
             </div>
         </div>
     );
 }
 
-export default App;
+export default Component1;
